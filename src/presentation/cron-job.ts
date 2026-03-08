@@ -10,6 +10,8 @@ const logRepository = new FileSystemLogRepository();
 
 const checkServer   = new CheckServerUseCase(logRepository);
 
+
 cron.schedule(CRON_EXPRESSION, () => {
-  checkServer.execute(GOOGLE_URL);
+    checkServer.execute(GOOGLE_URL);
 });
+
